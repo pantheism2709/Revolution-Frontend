@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  /* Custom hover animation */
+  .hover-underline-animation::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+.hover-underline-animation:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+.rounded-bottom {
+border-bottom-left-radius: 50%;
+/* border-bottom-right-radius: 30%; */
+}
+
+.rounded-top-right {
+border-bottom-left-radius: 50%;
+
+border-top-right-radius: 30%;
+}
+
+.fancy-horizontal::after {
+content: '';
+display: block;
+margin: 20px auto;
+width: 50%;
+height: 4px;
+background: linear-gradient(to right, #a855f7, #3b82f6);
+border-radius: 2px;
+transition: width 0.3s ease-in-out;
+}
+.fancy-horizontal:hover::after {
+width: 80%;
+}
+
+
+
+
+.loader-cube {
+  perspective: 800px;
+  animation: rotate 1.5s infinite linear;
+}
+
+.cube-face {
+  position: absolute;
+  width: 4rem; /* 16 Tailwind units */
+  height: 4rem; /* 16 Tailwind units */
+  background-color: #a328ef; /* Tailwind gray-700 */
+  opacity: 0.9;
+}
+
+.cube-front { transform: rotateY(0deg) translateZ(2rem); }
+.cube-back { transform: rotateY(180deg) translateZ(2rem); }
+.cube-left { transform: rotateY(-90deg) translateZ(2rem); }
+.cube-right { transform: rotateY(90deg) translateZ(2rem); }
+.cube-top { transform: rotateX(90deg) translateZ(2rem); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(2rem); }
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+/*
+input[type="range"]{
+  border-radius: 100px;
+
+}
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: rgb(211, 142, 211);
+  border-radius: 100px;
+  cursor: pointer;
+  
+
+}
+
+
+input[type="range"]::-moz-range-track {
+  background: purple;
+ 
+}
+*/
+
+
+   /* For Chrome, Safari, Opera, and Edge  */
+   .accent {
+    accent-color: #a84ff2;
+    height: 5px;
+     
+    /* background-color: white; */
+}
+
+
+
+.square-form {
+  width: 100%;
+  max-width: 500px;
+  /* height: 500px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10%; /* Rounded corners */
+  padding: 2rem;
+  background-color: white; /* Ensure the background is white */
+}
+
+.form-input, textarea, select ,.form-button  {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+.form-input:focus, textarea:focus, select:focus, .form-button:hover  {
+  transform: scale(1.05); /* Slightly scale up */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a deeper shadow */
+  outline: none;
+}
+
+
+@media (max-width: 500px) {
+  .square-form {
+    border-radius: 20px; /* Adjust for smaller screens */
+    height: auto; /* Allow auto height for smaller screens */
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-in-out;
+}
