@@ -45,7 +45,7 @@ const ProductCard = ({ product }) => {
           alt="Product"
           className=" h-fit w-fit rounded-t-xl"
         />
-        <div className="px-4 py-3 w-60">
+        <div className="px-4 py-3 w-60 flex flex-col">
           <span className="text-gray-400 mr-3 uppercase text-xs">
             {product.category}
           </span>
