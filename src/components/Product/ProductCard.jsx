@@ -43,7 +43,7 @@ const ProductCard = ({ product }) => {
         <img
           src={product.images[0].url} // Assuming there's at least one image in images array
           alt="Product"
-          className="h-60 w-60 object-cover rounded-t-xl"
+          className=" h-fit w-fit rounded-t-xl"
         />
         <div className="px-4 py-3 w-60">
           <span className="text-gray-400 mr-3 uppercase text-xs">
