@@ -6,11 +6,13 @@ import ProductCard from "../Product/ProductCard";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import HomePage from "../../assets/HomePage.jpg"
+import { useNavigate } from 'react-router-dom';
 
 
 
 function Home() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { loading, error, products } = useSelector((state) => state.products);
 
   const carouselImages = [
@@ -41,7 +43,10 @@ function Home() {
               insight into the mission, values, or services offered by the
               organization.
             </p>
-            <button className="bg-purple-800 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition duration-300 transform hover:scale-105">
+            <button className="bg-purple-800 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition duration-300 transform hover:scale-105"
+
+             onClick={() => navigate('/products')}
+              >
               Shop Now !!
             </button>
           </div>
