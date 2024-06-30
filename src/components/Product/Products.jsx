@@ -51,13 +51,13 @@ const Products = () => {
     );
   }, [dispatch, keyword, currentPage, priceRange, rating, selectedCategory, error]);
 
-  const productsPerPage = 12;
+  const productsPerPage = 8;
 
   const totalPages = Math.ceil(filteredProductsCount / productsPerPage);
 
   return (
     <div className="flex bg-purple-50">
-      <div className="w-1/6 p-4  h-screen overflow-auto border-r bg-white shadow-2xl">
+      <div className="w-1/5 p-4  h-screen overflow-auto border-r bg-white shadow-2xl">
         {/* Filter Section */}
         <div className="mb-4">
           <h2 className="text-lg font-bold">Categories</h2>
@@ -114,9 +114,9 @@ const Products = () => {
       </div>
       <div
         className="w-5/6 p-4 overflow-auto"
-        style={{ marginLeft: "25%" }}
+        // style={{ marginLeft: "25%" }}
       >
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-4 gap-4">
           {products.map((product) => (
             <ProductCard key={product._id} product={product} />
           ))}
