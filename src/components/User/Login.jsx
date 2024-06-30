@@ -13,13 +13,17 @@ function Login() {
   const { isLoading, error, user } = useSelector((state) => state.auth);
 
   useEffect(() => {
+
+    // console.log(error)
    
     if (user) {
       notifySuccess('Login successful!');
       navigate('/');
     }
-    if (error) {
-      notifyError(error.message || 'Login failed!');
+    if (error && error.message != "Please Login to access this resource") {
+
+      // console.log(error)
+      notifyError(error || 'Login failed!');
     }
   }, [user, error, navigate]);
 
