@@ -27,9 +27,9 @@ const Footer = () => {
         <div className="rightFooter text-center md:text-right">
           <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
           <div className="flex flex-col space-y-2">
-            <a href="http://instagram.com/sm2709" className="text-lg hover:underline">Instagram</a>
+            <a href="http://instagram.com/sm_27_09" className="text-lg hover:underline">Instagram</a>
             {/* <a href="http://youtube.com/6packprogramemr" className="text-lg hover:underline">YouTube</a> */}
-            <a href="http://instagram.com/sm2709" className="text-lg hover:underline">Facebook</a>
+            <a href="http://instagram.com/sm_27_09" className="text-lg hover:underline">Facebook</a>
           </div>
         </div>
       </div>
