@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { notifyError } from "../../toast";
 import { getProduct, clearProductErrors } from "../../redux/slices/productSlices";
-import ProductCard from "./ProductCard";
+import ProductCard from "../Product/ProductCard";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import HomePage from "../../assets/HomePage.jpg"
