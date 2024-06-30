@@ -2,17 +2,16 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { notifyError } from "../../toast";
 import { getProduct, clearProductErrors } from "../../redux/slices/productSlices";
+
 import ProductCard from "../Product/ProductCard";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import HomePage from "../../assets/HomePage.jpg"
-import { useNavigate } from 'react-router-dom';
 
 
 
 function Home() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const { loading, error, products } = useSelector((state) => state.products);
 
   const carouselImages = [
@@ -43,10 +42,7 @@ function Home() {
               insight into the mission, values, or services offered by the
               organization.
             </p>
-            <button className="bg-purple-800 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition duration-300 transform hover:scale-105"
-
-             onClick={() => navigate('/products')}
-              >
+            <button className="bg-purple-800 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition duration-300 transform hover:scale-105">
               Shop Now !!
             </button>
           </div>
@@ -77,7 +73,7 @@ function Home() {
       <div className="flex items-center justify-center min-h-screen bg-purple-100">
         <section
           id="Projects"
-          className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5"
+          className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5"
         >
           {products.map((product) => (
             <ProductCard key={product._id} product={product} />
