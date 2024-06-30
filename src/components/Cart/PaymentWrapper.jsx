@@ -12,6 +12,8 @@ import axios from "axios";
 
 // const stripePromise = loadStripe("your-stripe-public-key-here");
 
+const apiUrl=import.meta.env.VITE_API_URL;
+
 const PaymentWrapper = () => {
   const dispatch=useDispatch();
 
@@ -28,7 +30,7 @@ const PaymentWrapper = () => {
   
 
   async function getStripeApiKey() {
-    const { data } = await axios.get("http://localhost:9000/api/v1/stripeapikey",{
+    const { data } = await axios.get(`${apiUrl}/api/v1/stripeapikey`,{
       withCredentials:true
     });
     setStripeApiKey(data.stripeApiKey);
