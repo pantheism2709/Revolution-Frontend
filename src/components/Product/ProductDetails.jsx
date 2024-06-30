@@ -105,7 +105,7 @@ const ProductDetails = () => {
                   {product.images &&
                     product.images.map((item, i) => (
                       <img
-                        className="w-full h-64 object-cover rounded-lg shadow-xl"
+                        className="w-fit h-fit object-cover rounded-lg shadow-xl"
                         key={i}
                         src={item.url}
                         alt={`${i} Slide`}
